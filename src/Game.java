@@ -58,7 +58,7 @@ public class Game extends JFrame implements MouseListener {
 	}
 	
 	
-	
+	//Nao usado
 	public Graphics2D getContext(Graphics g)
 	{
 		/***********CONFIGURING PAINTING CONTEXT************************/
@@ -82,17 +82,11 @@ public class Game extends JFrame implements MouseListener {
 	
 	
 	
-	public void paintMap(Graphics g)
-	{
-		
-	}
-	
-	
 	
 	public void paint(Graphics g)
 	{
 		
-		Graphics clip = g;//getContext(g);
+		Graphics clip = g;
 		
 		
 		map.paint(clip);
