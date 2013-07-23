@@ -1,0 +1,4 @@
+3
+grama.bmp
+parede.bmp
+x.png
