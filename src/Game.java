@@ -135,7 +135,7 @@ public class Game extends JFrame implements MouseListener {
 		Node it = path.head;
 		while( it != null )
 		{
-			map.setTile(it.x, it.y, 2);
+			map.setTile(it.a, it.b, 2);
 			
 			it = it.next;
 		}
