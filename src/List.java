@@ -1,14 +1,14 @@
 
 class Node
 {
-	int x,y;
+	int a,b;
 	Node next;
 	
 	
-	public Node(int x, int y)
+	public Node(int a, int b)
 	{
-		this.x = x;
-		this.y = y;
+		this.a = a;
+		this.b = b;
 		this.next = null;
 	}
 	
@@ -36,14 +36,14 @@ public class List {
 		return this.head == null;
 	}
 	
-	public void addBack(int x, int y)
+	public void addBack(int a, int b)
 	{
-		this.addBack(new Node(x,y));
+		this.addBack(new Node(a,b));
 	}
 	
-	public void addFront(int x, int y)
+	public void addFront(int a, int b)
 	{
-		this.addFront(new Node(x,y));
+		this.addFront(new Node(a,b));
 	}
 	
 	public void addFront(Node bodyPart)

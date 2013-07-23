@@ -50,7 +50,8 @@ public class Map {
 
 
 	}
-
+	
+	//Recarrega o mapa do disco
 	public void reload()
 	{
 		Arquivo arq = new Arquivo(mapFile, "lol.txt");
@@ -70,7 +71,8 @@ public class Map {
 			}
 		}		
 	}
-
+	
+	//Pinta o mapa na tela
 	public void paint(Graphics g)
 	{
 
@@ -84,23 +86,10 @@ public class Map {
 		}		
 	}
 
-	public int getTileId(int i, int j)
-	{
-		return map[i][j];
-	}
 
-	//returns (i,j)
-	public Point getMapPos(int x, int y)
-	{
-		return new Point(y/tileH, x/tileW);		
-	}
+/**Os metodos abaixo sao importantes para implementar a bfs **/	
 
-	public boolean isInside(int i, int j)
-	{
-		return i >= 0 && i < this.map.length && j >= 0 && j < this.map[0].length;
-	}
-
-
+	//Seta todas as posicoes do mapa como nao visitadas (false)
 	public void clearVisited()
 	{
 		for(int i = 0; i < this.visited.length; i++)
@@ -111,13 +100,31 @@ public class Map {
 			}
 		}
 	}
-
-	public void setTile(int i, int j, int tileId)
+	
+	
+	
+	//Retorna o id do tile da posicao (i,j) do mapa
+	public int getTileId(int i, int j)
 	{
-		map[i][j] = tileId;
+		return map[i][j];
 	}
 
-	public void setTile2(int x, int y, int tileId)
+	//Conversor: Retorna posicao (i,j) no mapa, dadas as posicoes (x,y) da tela
+	public Point getMapPos(int x, int y)
+	{
+		return new Point(y/tileH, x/tileW);		
+	}
+	
+	//Retorna true se (i,j) estiver dentro do mapa
+	public boolean isInside(int i, int j)
+	{
+		return i >= 0 && i < this.map.length && j >= 0 && j < this.map[0].length;
+	}
+
+
+
+	//Seta um tile que contem a posicao (x,y) da tela
+	public void setTile(int x, int y, int tileId)
 	{
 		map[y/tileH][x/tileW] = tileId;
 	}

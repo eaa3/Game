@@ -100,8 +100,8 @@ public class Game extends JFrame implements MouseListener {
 		
 		if( walkAllowed && path != null && !path.isEmpty())
 		{
-			ghost.x = path.head.x;
-			ghost.y = path.head.y;
+			ghost.x = path.head.a;
+			ghost.y = path.head.b;
 			
 			path.removeFront();
 		}
@@ -134,24 +134,21 @@ public class Game extends JFrame implements MouseListener {
 		
 		System.out.println("Mouse clicked Point: " + event.getPoint());
 		
-		//ghost.x = event.getPoint().x - 40;
-		//ghost.y = event.getPoint().y - 40;
-		//System.out.println("TileId: " + map.getTileId(ghost.x, ghost.y));
 		
 		path = ghost.computePath(map, event.getPoint());
 		
+		/*
 		Node it = path.head;
 		while( it != null )
 		{
-			map.setTile2(it.x, it.y, 2);
+			map.setTile(it.x, it.y, 2);
 			
 			it = it.next;
 		}
-		walkAllowed = true;
+		
 		System.out.println("Path length: " + path.size);
-		
-		
-		//this.repaint();
+		*/
+		walkAllowed = true;
 		
 		
 	}
