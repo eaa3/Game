@@ -90,7 +90,7 @@ public class Monster {
 			do
 			{
 				//Essas continhas sao pra converter para um ponto na tela (e nao no mapa)
-				path.addFront(temp.y*map.tileW, temp.x*map.tileH);
+				path.addFront(temp.x, temp.y);
 				
 			
 				temp = fathers[temp.x][temp.y];				

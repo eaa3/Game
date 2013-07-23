@@ -91,11 +91,12 @@ public class Game extends JFrame implements MouseListener {
 		
 		map.paint(clip);
 		
+
 		
 		if( walkAllowed && path != null && !path.isEmpty())
 		{
-			ghost.x = path.head.a;
-			ghost.y = path.head.b;
+			ghost.x = path.head.b*map.tileW;
+			ghost.y = path.head.a*map.tileH;
 			
 			path.removeFront();
 		}
