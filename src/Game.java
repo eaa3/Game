@@ -131,7 +131,7 @@ public class Game extends JFrame implements MouseListener {
 		
 		path = ghost.computePath(map, event.getPoint());
 		
-		/*
+		
 		Node it = path.head;
 		while( it != null )
 		{
@@ -141,7 +141,7 @@ public class Game extends JFrame implements MouseListener {
 		}
 		
 		System.out.println("Path length: " + path.size);
-		*/
+		
 		walkAllowed = true;
 		
 		
